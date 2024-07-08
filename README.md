@@ -3,6 +3,7 @@ The error occurs in alpha.1 as well, but NOT alpha.0
 
 The following error occurs when I run the build command
 
+```
 Panic occurred at runtime. Please file an issue on GitHub with the backtrace below: https://github.com/web-infra-dev/rspack/issues
 Message:  assertion failed: self.max_target_is_set
 Location: crates\rspack_core\src\exports_info.rs:1722
@@ -76,3 +77,4 @@ Run with RUST_BACKTRACE=full to include source snippets.
     at <unknown source file>
 33: RtlUserThreadStart
     at <unknown source file>
+```
