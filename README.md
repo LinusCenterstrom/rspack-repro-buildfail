@@ -1,10 +1,10 @@
 To repro run yarn install then yarn build
 
 The output index.js in the distfolder contains a call to __webpack_require__
-with null as a parameter on line 2903
+with p774 as a parameter on line 183
 ```
-__webpack_require__(null);
+__webpack_require__(p774);
 ```
 
-This causes the app to crash on my app which this is a small repro of.
-Removing the line seems to fix the bug
+The moduleId should just be 774 from what I can tell.
+If you run the output code it will crash since p774 is undefined.

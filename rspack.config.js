@@ -4,7 +4,7 @@ const cfg = {
 		path: "./dist"
 	},
 	entry: {
-		index: "./src/index.tsx"
+		index: "./src/index.ts"
 	},
 	module: {
 		rules: [
