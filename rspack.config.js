@@ -1,12 +1,23 @@
 /** @type {import('@rspack/cli').Configuration} */
-const serverCfg = {
-	target: "node",
+const cfg = {
 	output: {
 		path: "./dist"
 	},
 	entry: {
-		index: "./src/index.ts"
+		index: "./src/index.tsx"
+	},
+	module: {
+		rules: [
+			{
+				test: /\.tsx?$/,
+				loader: "builtin:swc-loader"
+			}
+		]
+	},
+	optimization: {
+		splitChunks: false,
+		minimize: false
 	}
 };
 
-module.exports = serverCfg;
+module.exports = cfg;
